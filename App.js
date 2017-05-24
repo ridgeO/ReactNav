@@ -1,48 +1,19 @@
+'use strict';
 import React from 'react';
 import {
   AppRegistry,
-  View,
-  Button,
-  Text,
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import LoginScreen from './components/LoginScreen.js';
+import HomeScreen from './components/HomeScreen.js';
+import NextCard from './components/NextCard.js';
 
-class NextScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Next',
-    headerRight: <Button title="Something else" />
-  };
-  render() {
-    return (
-      <View>
-        <Text>This is the NextScreen</Text>
-      </View>
-    );
+const ReactNav = StackNavigator(
+  {
+    Login: { screen: LoginScreen },
+    Home: { screen: HomeScreen },
+    Next: { screen: NextCard }
   }
-}
-
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
-    headerRight: <Button title="Info" />
-  };
-  render() {
-    const { navigate } = this.props.navigation;
-    return (
-      <View>
-        <Text>Hello, Navigation!</Text>
-        <Button
-          onPress={() => navigate('Next')}
-          title="Next Screen"
-        />
-      </View>
-    );
-  }
-}
-
-const ReactNav = StackNavigator({
-  Home: { screen: HomeScreen },
-  Next: { screen: NextScreen }
-});
+);
 
 AppRegistry.registerComponent('ReactNav', () => ReactNav);
