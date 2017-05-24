@@ -10,6 +10,7 @@ import { StackNavigator } from 'react-navigation';
 class NextScreen extends React.Component {
   static navigationOptions = {
     title: 'Next',
+    headerRight: <Button title="Something else" />
   };
   render() {
     return (
@@ -23,6 +24,7 @@ class NextScreen extends React.Component {
 class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    headerRight: <Button title="Info" />
   };
   render() {
     const { navigate } = this.props.navigation;
