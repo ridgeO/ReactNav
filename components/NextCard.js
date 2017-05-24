@@ -11,10 +11,6 @@ class NextCard extends Component {
     return(
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text>This is the Next Card Screen</Text>
-        <Button
-          title='Go Back'
-          onPress={ () => this.props.navigation.goBack() }
-        />
       </View>
     );
   }

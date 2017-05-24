@@ -9,12 +9,8 @@ import {
 class HomeScreen extends Component {
   render() {
     return(
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>This is the Home Screen</Text>
-        <Button
-          title='Go Back'
-          onPress={ () => this.props.navigation.goBack() }
-        />
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'red'}}>
+        <Text style={{color: 'white', fontSize: 20}}>This is the Home Screen</Text>
       </View>
     );
   }
@@ -24,7 +20,7 @@ HomeScreen.navigationOptions = props => {
   const { navigation } = props;
   return {
     headerTitle: 'Home',
-    headerLeft: (<Button title='Drawer' onPress={ () => navigation.navigate('Next') }/>),
+    headerLeft: (<Button title='Drawer' onPress={ () => navigation.navigate('DrawerOpen') }/>),
     headerRight: (<Button title='NextCard' onPress={ () => navigation.navigate('Next') }/>)
   }
 };
