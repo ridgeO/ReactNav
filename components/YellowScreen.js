@@ -6,18 +6,18 @@ import {
   Button
 } from 'react-native';
 
-class Settings extends Component {
+class YellowScreen extends Component {
   render() {
     return(
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'yellow'}}>
-        <Text style={{fontSize: 20}}>This is the Settings Screen</Text>
+        <Text style={{fontSize: 20}}>This is the Yellow Screen</Text>
       </View>
     );
   }
 }
 
-Settings.navigationOptions = {
-  title: 'Settings'
+YellowScreen.navigationOptions = {
+  title: 'Yellow'
 };
 
-export default Settings;
+export default YellowScreen;

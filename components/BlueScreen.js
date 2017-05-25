@@ -6,18 +6,18 @@ import {
   Button
 } from 'react-native';
 
-class Profile extends Component {
+class BlueScreen extends Component {
   render() {
     return(
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue'}}>
-        <Text style={{fontSize: 20, color: 'white'}}>This is the Profile Screen</Text>
+        <Text style={{fontSize: 20, color: 'white'}}>This is the Blue Screen</Text>
       </View>
     );
   }
 }
 
-Profile.navigationOptions = {
-  title: 'Profile'
+BlueScreen.navigationOptions = {
+  title: 'Blue'
 };
 
-export default Profile;
+export default BlueScreen;

@@ -6,23 +6,23 @@ import {
   Button
 } from 'react-native';
 
-class HomeScreen extends Component {
+class RedScreen extends Component {
   render() {
     return(
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'red'}}>
-        <Text style={{color: 'white', fontSize: 20}}>This is the Home Screen</Text>
+        <Text style={{color: 'white', fontSize: 20}}>This is the Red Screen</Text>
       </View>
     );
   }
 }
 
-HomeScreen.navigationOptions = props => {
+RedScreen.navigationOptions = props => {
   const { navigation } = props;
   return {
-    headerTitle: 'Home',
+    headerTitle: 'Red',
     headerLeft: (<Button title='Drawer' onPress={ () => navigation.navigate('DrawerOpen') }/>),
-    headerRight: (<Button title='NextCard' onPress={ () => navigation.navigate('Next') }/>)
+    headerRight: (<Button title='Purple' onPress={ () => navigation.navigate('Purple') }/>)
   }
 };
 
-export default HomeScreen;
+export default RedScreen;

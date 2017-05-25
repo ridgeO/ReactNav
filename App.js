@@ -5,11 +5,11 @@ import {
   View
 } from 'react-native';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
-import LoginScreen from './components/LoginScreen.js';
-import HomeScreen from './components/HomeScreen.js';
-import NextCard from './components/NextCard.js';
-import Settings from './components/Settings.js';
-import Profile from './components/Profile.js';
+import GreenScreen from './components/GreenScreen.js';
+import RedScreen from './components/RedScreen.js';
+import PurpleScreen from './components/PurpleScreen.js';
+import YellowScreen from './components/YellowScreen.js';
+import BlueScreen from './components/BlueScreen.js';
 
 class ReactNav extends Component {
   render() {
@@ -20,31 +20,31 @@ class ReactNav extends Component {
 }
 
 const Stack = {
-  Home: { screen: HomeScreen },
-  Profile: { screen: Profile },
-  Settings: { screen: Settings },
-  Next: { screen: NextCard }
+  Red: { screen: RedScreen },
+  Blue: { screen: BlueScreen },
+  Yellow: { screen: YellowScreen },
+  Purple: { screen: PurpleScreen }
 };
 
 const DrawerRoutes = {
-	Home: {
-		name: 'Home',
-		screen: StackNavigator(Stack, { initialRouteName: 'Home' })
+	Red: {
+		name: 'Red',
+		screen: StackNavigator(Stack, { initialRouteName: 'Red' })
 	},
-	Profile: {
-		name: 'Profile',
-		screen: StackNavigator(Stack, { initialRouteName: 'Profile' })
+	Blue: {
+		name: 'Blue',
+		screen: StackNavigator(Stack, { initialRouteName: 'Blue' })
 	},
-	Settings: {
-		name: 'Settings',
-		screen: StackNavigator(Stack, { initialRouteName: 'Settings' })
+	Yellow: {
+		name: 'Yellow',
+		screen: StackNavigator(Stack, { initialRouteName: 'Yellow' })
 	},
 };
 
 const RootNavigator =
 	StackNavigator({
     Stack: {
-      name: 'Login', screen: LoginScreen
+      name: 'Green', screen: GreenScreen
     },
 		Drawer: {
 			name: 'Drawer',
